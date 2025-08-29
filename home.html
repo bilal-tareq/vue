@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="app">
-        <div>{{ message }}</div>  <!-- we take about v.model and computed -->
+        <div>{{ message }}</div>  <!-- we take about v.model and computed and previous  -->
         <input type="text" v-model.trim="firstn" />  <!-- trim to remove spaces -->
         
         <br>
@@ -30,17 +30,25 @@
  const { createApp ,ref,reactive,computed } = Vue;
 createApp({
     setup() {
+        
+        
         let firstn = ref("");
         let secndn = ref("");
 
         let lastn = ref("");
+        let lasfctn = ref(0);
 
-        console.log(firstn,secndn,lastn);
+        console.log(firstn,secndn,lastn,lasfctn);
+
+
+        const message = computed( ()=>{
+            return `welcome ${firstn.value} ${secndn.value} ${lastn.value}`;
+        } );
      
 
 
         return{
-            firstn,secndn,lastn,
+            firstn,secndn,lastn,lasfctn, message
         }
 
        
