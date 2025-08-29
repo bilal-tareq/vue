@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>{{ message }}</div>
+        <input type="text" v-model="firstn" />
+        <br>
+        <input type="text" v-model="secndn" />
+        <br>
+        <input type="text" v-model="lastn" />
+        <br>
+        <p>name is {{firstn}}+{{secndn}}</p>
+
+
+
+    </div>
+    
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+ const { createApp ,ref,reactive,computed } = Vue;
+createApp({
+    setup() {
+        let firstn = ref("");
+        let secndn = ref("");
+
+        let lastn = ref("");
+
+        console.log(firstn,secndn,lastn);
+     
+
+
+        return{
+            firstn,secndn,lastn,
+        }
+
+       
+    }
+}).mount('#app');
+    
+  /*  const App = {
+    data() {
+
+     /*data function here
+     date.now();
+     v.model
+     computed 
+     
+     
+     
+     */
+
+
+</script>
+</body>
+</html>
