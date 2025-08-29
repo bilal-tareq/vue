@@ -7,14 +7,17 @@
 </head>
 <body>
     <div id="app">
-        <div>{{ message }}</div>
-        <input type="text" v-model="firstn" />
+        <div>{{ message }}</div>  <!-- we take about v.model and computed -->
+        <input type="text" v-model.trim="firstn" />  <!-- trim to remove spaces -->
+        
         <br>
         <input type="text" v-model="secndn" />
         <br>
         <input type="text" v-model="lastn" />
         <br>
-        <p>name is {{firstn}}+{{secndn}}</p>
+        <input type="number" v-model.number="lasfctn" /> <!-- number to convert to number -->
+        <br>
+        <p>name is {{firstn}}+{{secndn}} {{lastn}} </p>
 
 
 
